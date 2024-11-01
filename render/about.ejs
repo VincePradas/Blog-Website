@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog | <%= title %></title>
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="/style-tw.css" type="text/css">
+    <%- include('./partials/head.ejs') %>  
+</head>
+<body class="bg-yellow-50/25">
+    <%- include('./partials/nav.ejs') %>
+    <div class="container mx-auto px-4 py-8 mt-20">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden p-8">
+            <h3 class="text-3xl font-semibold mb-4">About</h3>
+            <p class="text-lg text-gray-700 mb-4"><br>Hey, I'm Vince Warren Pradas, the developer of this blog website. I'm the one who built it from scratch and this is my first project using a server-side programming language framework called Node.js, crafting every bit of it with care. Whether you're here to read, share your thoughts, or create your own blog, I'm here to make sure you have a smooth and enjoyable experience. So feel free to explore, write, and connect with others—it's what this site is all about.This website is like a cozy cafe where you can sit back, relax, and share your stories with others. Whether you're into cooking, travel, or just want to chat about your day, there's something here for everyone. Think of it as your own little corner of the internet, where you can hang out and meet new people. <br><br>If you ever encounter a bug, I've placed some buttons below that will redirect you to my contact. You can send me some screenshots or something so I can fix it.</p>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/vince.6910?mibextid=ZbWKwL" class="inline-block bg-gradient-to-b from-red-500 to-purple-500 text-white px-6 py-3 rounded-md shadow-md hover:bg-opacity-90 transition duration-300">Messenger</a>
+                <a href="https://web.telegram.org/k/#@vince691" class="inline-block bg-gradient-to-b from-blue-500 to-blue-700 text-white px-6 py-3 rounded-md shadow-md hover:bg-opacity-90 transition duration-300">Telegram</a>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

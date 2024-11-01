@@ -1,0 +1,15 @@
+<header>
+    <div class="header-container">
+        <div class="nav-title">
+            <h1 class="text-5xl font-bold text-red-500"><a href="/blogs">Write</a></h1>
+            <p class="nav-title">DISCOVER, CONNECT AND SHARE</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/blogs" class="<%= currentPage === 'home' ? 'current-page' : '' %>">Home</a></li>
+                <li><a href="/about" class="<%= currentPage === 'about' ? 'current-page' : '' %>">About</a></li>
+                <li><a href="/create" class="<%= currentPage === 'create' ? 'current-page' : '' %>">New Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

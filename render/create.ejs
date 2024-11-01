@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog | <%= title %></title>
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="/style-tw.css" type="text/css">
+    <%- include('./partials/head.ejs') %>  
+</head>
+<body class="bg-yellow-50/25">
+    <%- include('./partials/nav.ejs') %>
+    <div class="container mx-auto px-4 py-8 mt-20">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden p-8">
+            <h1 class="text-3xl font-semibold mb-8 text-center">Create New Blog Post</h1>
+            <form action="/add-blog" method="POST">
+                <div class="mb-4">
+                    <label for="title" class="block text-gray-700">Title:</label>
+                    <input type="text" id="title" name="title" class="form-input p-2 h-10 w-full rounded-md shadow-sm" placeholder="Title" required>
+                </div>
+                <div class="mb-4">
+                    <label for="author" class="block text-gray-700">Author:</label>
+                    <input type="text" id="author" name="author" class="form-input p-2 h-10 w-full rounded-md shadow-sm" placeholder="Author">
+                </div>
+                <div class="mb-4">
+                    <label for="category" class="block text-gray-700">Category:</label>
+                    <input type="text" id="category" name="category" class="form-input p-2 h-10 w-full rounded-md shadow-sm" placeholder="- Personal - Lifestyle - Educational - Health - Tech -" required>
+                </div>
+                <div class="mb-4">
+                    <label for="subtitle" class="block text-gray-700">Subtitle:</label>
+                    <input type="text" id="subtitle" name="subtitle" class="form-input p-2 h-10 w-full rounded-md shadow-sm" placeholder="Subtitle" required>
+                </div>
+                <div class="mb-4">
+                    <label for="content" class="block text-gray-700">Body:</label>
+                    <textarea id="content" name="body" rows="10" class="form-textarea p-2 w-full rounded-md shadow-sm" placeholder="Content" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300 focus:outline-none">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Blog | <%= title %></title>
+    <link rel="stylesheet" href="/style-tw.css" type="text/css">
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <%- include('./partials/head.ejs') %>  
+    <script src="/client.js"></script> 
+<body class="bg-yellow-50/25">
+    <%- include('./partials/nav.ejs') %>
+    <div class="container mx-auto px-4 py-8 mt-20">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-red-400">
+            <div class="p-6">
+                <h1 class="text-2xl font-semibold text-gray-800 mb-2"><%= blog.title %></h1>
+                <div class="flex justify-between items-center mb-4" id="body-header">
+                    <p class="text-sm text-gray-600">Published on <%= blog.createdAt %></p>
+                    <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300 focus:outline-none" id="edit-post">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M15.707 3.293a1 1 0 0 1 0 1.414L5.414 15.707a1 1 0 0 1-1.414-1.414L14.293 3.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="text-gray-700">
+                    <p class="description"><%= blog.body %> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
